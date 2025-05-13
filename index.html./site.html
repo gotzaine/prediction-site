@@ -6,39 +6,44 @@
   <title>Message from the Universe</title>
   <style>
     body {
-      background-color: #fefae0;
-      color: #283618;
+      font-family: 'Georgia', serif;
+      background-color: #f7f1e3;
+      color: #2f3542;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: 'Georgia', serif;
       text-align: center;
       padding: 20px;
     }
-    .message {
-      font-size: 24px;
-      max-width: 600px;
+    .message-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="message" id="msg">Loading...</div>
+  <div class="message-box">
+    <h1>Message from the Universe</h1>
+    <p id="message">Loading your message...</p>
+  </div>
   <script>
     const messages = [
       "You are exactly where you need to be.",
-      "Today is a good day to smile.",
-      "Magic is closer than you think.",
-      "The Universe believes in you.",
-      "Take a deep breath. You’re doing great.",
+      "The Universe smiles at your courage.",
+      "Today holds magical moments for you.",
       "Something wonderful is on its way.",
-      "Trust the process. It’s unfolding beautifully.",
-      "Shine your light, the world needs it.",
-      "You're a walking miracle.",
-      "The stars are rooting for you."
+      "The light you give out will return.",
+      "You are loved more than you know.",
+      "Even the stars took time to shine.",
+      "The world is better because you're in it.",
+      "One smile can change the whole day.",
+      "You are made of stardust and dreams."
     ];
-    const random = Math.floor(Math.random() * messages.length);
-    document.getElementById("msg").textContent = messages[random];
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("message").innerText = randomMessage;
   </script>
 </body>
 </html>
