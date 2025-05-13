@@ -1,29 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Message from the Universe</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #0b0c10;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            padding: 20px;
-        }
-        .message {
-            font-size: 1.8em;
-            max-width: 700px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message from the Universe</title>
+  <style>
+    body {
+      background-color: #fefae0;
+      color: #283618;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .message {
+      font-size: 24px;
+      max-width: 600px;
+    }
+  </style>
 </head>
 <body>
-    <div class="message">You are a living wish come true.</div>
+  <div class="message" id="msg">Loading...</div>
+  <script>
+    const messages = [
+      "You are exactly where you need to be.",
+      "Today is a good day to smile.",
+      "Magic is closer than you think.",
+      "The Universe believes in you.",
+      "Take a deep breath. You’re doing great.",
+      "Something wonderful is on its way.",
+      "Trust the process. It’s unfolding beautifully.",
+      "Shine your light, the world needs it.",
+      "You're a walking miracle.",
+      "The stars are rooting for you."
+    ];
+    const random = Math.floor(Math.random() * messages.length);
+    document.getElementById("msg").textContent = messages[random];
+  </script>
 </body>
 </html>
