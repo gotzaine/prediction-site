@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message from the Universe</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f7f1e3;
+      color: #2f3542;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    .message-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <h1>Message from the Universe</h1>
+    <p id="message">Loading your message...</p>
+  </div>
+  <script>
+    const messages = [
+      "You are exactly where you need to be.",
+      "The Universe smiles at your courage.",
+      "Today holds magical moments for you.",
+      "Something wonderful is on its way.",
+      "The light you give out will return.",
+      "You are loved more than you know.",
+      "Even the stars took time to shine.",
+      "The world is better because you're in it.",
+      "One smile can change the whole day.",
+      "You are made of stardust and dreams."
+    ];
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("message").innerText = randomMessage;
+  </script>
+</body>
+</html>
